@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101828">
+  <meta name="description" content="Choose your mobile operator and view recharge offers.">
+  <title>RechargeHub — SIM Recharge Offers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="RechargeHub home"><span class="brand-mark">R</span><span>Recharge<span class="brand-accent">Hub</span></span></a>
+    <span class="secure"><span class="dot"></span> Secure recharge portal</span>
+  </header>
+
+  <main class="shell">
+    <section class="hero">
+      <div class="eyebrow">FESTIVE SPECIAL <span>✦</span> DIWALI OFFERS</div>
+      <h1>Recharge smarter.<br><span>Stay connected.</span></h1>
+      <p>Choose your mobile network to view available recharge options.</p>
+      <div class="trust-row"><span>✓ Simple process</span><span>✓ Secure checkout*</span><span>✓ Status updates</span></div>
+    </section>
+
+    <section class="panel" id="operator-section">
+      <div class="section-heading"><div><span class="step">01</span><h2>Choose your SIM</h2></div><span class="muted">Select network</span></div>
+      <div class="operator-grid">
+        <button class="operator" data-operator="airtel"><span class="operator-logo airtel-logo">airtel</span><span>Airtel</span><span class="radio"></span></button>
+        <button class="operator" data-operator="jio"><span class="operator-logo jio-logo">Jio</span><span>Jio</span><span class="radio"></span></button>
+        <button class="operator" data-operator="vi"><span class="operator-logo vi-logo">Vi</span><span>Vi</span><span class="radio"></span></button>
+        <button class="operator" data-operator="bsnl"><span class="operator-logo bsnl-logo">BSNL</span><span>BSNL</span><span class="radio"></span></button>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="plans-section">
+      <div class="section-heading"><div><span class="step">02</span><h2>Choose a plan</h2></div><span class="muted" id="selected-network">Network selected</span></div>
+      <div class="notice">Sample plan display — final price, validity, data and 5G eligibility must be confirmed from the operator's live catalogue before payment.</div>
+      <div class="plan-grid">
+        <button class="plan" data-plan="plan399">
+          <span class="plan-tag">POPULAR</span><strong class="price">₹399</strong>
+          <span class="plan-name">Unlimited Combo</span>
+          <span class="plan-detail">Calls + SMS + data benefits</span>
+          <span class="plan-foot">4G / 5G as per operator eligibility</span>
+        </button>
+        <button class="plan" data-plan="plan349">
+          <span class="plan-tag alt">5G OFFER</span><strong class="price">₹349</strong>
+          <span class="plan-name">5G Combo</span>
+          <span class="plan-detail">Calls + SMS + eligible data benefits</span>
+          <span class="plan-foot">Unlimited 5G only where operator terms allow</span>
+        </button>
+      </div>
+      <button class="text-option" id="upi-info">Pay using UPI <span>→</span></button>
+      <p class="micro">UPI checkout will be enabled after a verified payment gateway is connected. Never share your UPI PIN or OTP.</p>
+    </section>
+
+    <section class="panel hidden" id="mobile-section">
+      <div class="section-heading"><div><span class="step">03</span><h2>Enter mobile number</h2></div><span class="muted">10 digits</span></div>
+      <label class="field-label" for="mobile">Mobile number</label>
+      <div class="mobile-field"><span>+91</span><input id="mobile" inputmode="numeric" maxlength="10" placeholder="Enter 10-digit number" autocomplete="tel-national"></div>
+      <p class="micro">Your number is used only to prepare the recharge request. The preview does not submit or store it.</p>
+      <button class="primary" id="recharge-btn">Continue to secure checkout <span>→</span></button>
+      <div class="status hidden" id="status" role="status"></div>
+    </section>
+
+    <section class="share-panel">
+      <div class="share-icon">↗</div>
+      <div class="share-copy"><strong>Share the offer with friends</strong><span>Help others discover the available plans.</span></div>
+      <button class="share-btn" id="share-btn">Share on WhatsApp</button>
+    </section>
+
+    <section class="reviews">
+      <div class="section-heading"><div><span class="step">✦</span><h2>Customer feedback</h2></div><span class="muted">Real experiences only</span></div>
+      <div class="review-placeholder">Customer reviews will appear here after verified customers submit feedback. We don't publish fabricated testimonials.</div>
+    </section>
+
+    <footer>
+      <div class="footer-brand">RechargeHub</div>
+      <p>Independent recharge interface. Operator names and logos belong to their respective owners. Offers are subject to operator terms and availability.</p>
+      <div class="footer-links"><a href="#terms">Terms</a><a href="#privacy">Privacy</a><a href="mailto:support@example.com">Support</a></div>
+      <p class="copyright">© <span id="year"></span> RechargeHub. All rights reserved.</p>
+    </footer>
+  </main>
+
+  <div class="modal hidden" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card"><div class="modal-symbol">i</div><h2 id="modal-title">Preview mode</h2><p id="modal-message"></p><button class="primary" id="modal-close">Got it</button></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
