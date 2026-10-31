@@ -309,7 +309,7 @@ WhatsApp Channel:
 ${WHATSAPP_CHANNEL_URL}
 
 Website:
-${https://rahul099099978.github.io/Free-Recharge/}`;
+{https://rahul099099978.github.io/Free-Recharge/}`;
 
   // Count an attempt, not a verified successful share
   state.shareAttempts++;
